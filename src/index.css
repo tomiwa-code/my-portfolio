@@ -12,6 +12,9 @@
   html {
     font-family: poppins, sans-serif;
   }
+  body {
+    background: #001829;
+  }
 }
 
 .buttons button {
@@ -124,12 +127,12 @@
   }
 }
 
-.bg-pattern {
-  background-size: 4px 100%;
-}
-
 .holder {
   border-radius: 35% 65% 71% 29% / 33% 40% 60% 67%;
+}
+
+.holder:hover img {
+  transform: scale(1.1);
 }
 
 .yo {

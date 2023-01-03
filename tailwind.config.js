@@ -19,9 +19,6 @@ module.exports = {
       fontFamily: {
         stretch: "stretch",
       },
-      backgroundImage: {
-        pattern: "linear-gradient(to right, #000000, #000000 2px, #b2bec6 2px, #b2bec6 )",
-      },
     },
   },
   plugins: [],
