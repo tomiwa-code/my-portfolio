@@ -96,7 +96,20 @@ export const notification = {
       type: "spring",
       stiffness: 150,
       damping: 8,
-      mass: 0.4
+      mass: 0.4,
+    },
+  },
+};
+
+export const socialMadre = {
+  initial: {
+    opacity: 0,
+  },
+  animate: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+      staggerDirection: -1,
     },
   },
 };
