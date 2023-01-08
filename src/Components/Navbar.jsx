@@ -1,8 +1,12 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { fadeIn } from "./variants";
+import { fadeIn } from "../variants";
+import { useLocation } from "react-router-dom";
 
 const Navbar = () => {
+  const loc = useLocation();
+  const active = loc.pathname.split("/")[1];
+
   return (
     <motion.div
       variants={fadeIn("left")}
@@ -16,7 +20,9 @@ const Navbar = () => {
         <li className="list-none navbar -rotate-90">
           <Link
             to={"/contact"}
-            className="text-white text-xs md:text-sm font-light"
+            className={`text-white text-xs md:text-sm font-light ${
+              active === "contact" ? "active" : ""
+            }`}
           >
             Contact
           </Link>
@@ -24,7 +30,9 @@ const Navbar = () => {
         <li className="list-none navbar -rotate-90">
           <Link
             to={"/about"}
-            className="text-white text-xs md:text-sm font-light"
+            className={`text-white text-xs md:text-sm font-light ${
+              active === "about" ? "active" : ""
+            }`}
           >
             About
           </Link>
@@ -32,7 +40,9 @@ const Navbar = () => {
         <li className="list-none navbar -rotate-90">
           <Link
             to={"/projects"}
-            className="text-white text-xs md:text-sm font-light"
+            className={`text-white text-xs md:text-sm font-light ${
+              active === "projects" ? "active" : ""
+            }`}
           >
             Project
           </Link>
@@ -40,7 +50,9 @@ const Navbar = () => {
         <li className="list-none navbar -rotate-90">
           <Link
             to={"/"}
-            className="text-primary text-xs md:text-sm line-through decoration-2 active"
+            className={`text-white text-xs font-light md:text-sm ${
+              active === "" ? "active" : ""
+            } `}
           >
             Home
           </Link>

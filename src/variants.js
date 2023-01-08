@@ -15,81 +15,88 @@ export const fadeIn = (props) => {
   };
 };
 
-export const slideInUpDown = (props) => {
-  return {
-    initial: {
-      opacity: 0,
-      y: props === "top" ? -50 : 50,
-    },
-    animate: (custom) => ({
-      opacity: 1,
-      y: 0,
-      transition: {
-        delay: custom * 0.5,
-        ease: "easeOut",
-      },
-    }),
-  };
-};
-
-export const fade = {
-  initial: {
-    opacity: 0,
-  },
-  animate: {
-    opacity: 1,
-    transition: {
-      delay: 1.9,
-      ease: "easeOut",
-    },
-  },
-};
-
-export const enter = {
-  initial: {
-    opacity: 0,
-  },
-  animate: {
-    opacity: 1,
-  },
-};
-
-export const slideInSpring = (props) => {
-  return {
-    initial: {
-      opacity: 0,
-      y: props === "top" ? -50 : 50,
-    },
-    animate: (custom) => ({
-      opacity: 1,
-      y: 0,
-      transition: {
-        type: "spring",
-        stiffness: 150,
-        delay: custom * 0.5,
-        ease: "easeOut",
-      },
-    }),
-  };
-};
-
-export const slideAcross = {
-  animate: {
-    width: ["0%", "100%", "0%"],
-    left: ["0%", "0%", "100%"],
-    transition: {
-      ease: "easeInOut",
-      duration: 0.5,
-      delay: 1.7,
-    },
-  },
-};
-
 export const exits = {
   exit: {
     x: "-100vw",
     transition: {
       ease: "easeInOut",
+    },
+  },
+};
+
+export const slide = {
+  initial: {
+    opacity: 0,
+    x: "100vw",
+  },
+  animate: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: "spring",
+      stiffness: 120,
+      damping: 8,
+      mass: 0.4,
+    },
+  },
+};
+
+export const slideIn = {
+  initial: {
+    opacity: 0,
+    x: 50,
+  },
+  animate: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: "spring",
+      stiffness: 150,
+    },
+  },
+};
+
+export const madre = {
+  initial: {
+    opacity: 0,
+  },
+  animate: {
+    opacity: 1,
+  },
+};
+
+export const slideInSpring = (prop) => {
+  return {
+    initial: {
+      x: prop === "right" ? 500 : -500,
+      opacity: 0,
+    },
+    animate: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        type: "spring",
+        stiffness: 120,
+        damping: 8,
+        mass: 0.4,
+      },
+    },
+  };
+};
+
+export const notification = {
+  initial: {
+    opacity: 0,
+    x: 500,
+  },
+  animate: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: "spring",
+      stiffness: 150,
+      damping: 8,
+      mass: 0.4
     },
   },
 };

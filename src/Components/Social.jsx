@@ -3,7 +3,7 @@ import { TfiLinkedin } from "react-icons/tfi";
 import { BsTwitter } from "react-icons/bs";
 import { BsInstagram } from "react-icons/bs";
 import { motion } from "framer-motion";
-import { fadeIn } from "./variants";
+import { fadeIn } from "../variants";
 
 const Social = () => {
   const classes =
@@ -19,22 +19,22 @@ const Social = () => {
     >
       <div className="flex flex-col items-center justify-between h-52 mb-8">
         <li className="list-none social">
-          <a href="github" className={classes}>
+          <a href="https://github.com/tomiwa-code" className={classes}>
             <FiGithub />
           </a>
         </li>
         <li className="list-none social">
-          <a href="github" className={classes}>
+          <a href="https://www.linkedin.com/in/ayoola-ogunbase-96694715b" className={classes}>
             <TfiLinkedin />
           </a>
         </li>
         <li className="list-none social">
-          <a href="github" className={classes}>
+          <a href="https://www.twitter.com/crownkvnq" className={classes}>
             <BsTwitter />
           </a>
         </li>
         <li className="list-none social">
-          <a href="github" className={classes}>
+          <a href="https://www.instagram.com/crown.kvnq" className={classes}>
             <BsInstagram />
           </a>
         </li>
