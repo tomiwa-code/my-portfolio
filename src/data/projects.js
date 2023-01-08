@@ -25,7 +25,7 @@ export const projectArr = [
     utilities: "React, Css, VScode, Framer motion, Swiper js, Adobe Xd",
     video: "https://res.cloudinary.com/dgdoymhtj/video/upload/v1673183957/my-portfolio/shoot_haw2br.mp4",
     img: "https://res.cloudinary.com/dgdoymhtj/image/upload/v1673182217/my-portfolio/shooot_pyunc9.png",
-    link1: "git",
+    link1: "https://tomiwacode-shooot.netlify.app/",
     link2: "github",
   },
   {
@@ -34,7 +34,7 @@ export const projectArr = [
     utilities: "React, Tailwind Css, VScode, Framer motion, Css, Adobe Xd",
     video: "",
     img: "https://res.cloudinary.com/dgdoymhtj/image/upload/v1673182211/my-portfolio/myportfolio_dziw8p.png",
-    link1: "git",
+    link1: "https://tomiwa-code.vercel.app/",
     link2: "github",
   },
 ];

@@ -5,7 +5,7 @@ import { BsInstagram } from "react-icons/bs";
 import { BsPlusLg } from "react-icons/bs";
 import { BsDashLg } from "react-icons/bs";
 import { AnimatePresence, motion } from "framer-motion";
-import { fadeIn, slideIn, socialMadre, fadeInTwo } from "../variants";
+import { fadeIn, slideIn, socialMadre } from "../variants";
 import { useState } from "react";
 
 const Social = () => {

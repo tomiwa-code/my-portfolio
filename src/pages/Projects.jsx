@@ -71,12 +71,16 @@ const Projects = () => {
                 <div className="flex justify-evenly md:justify-between items-center">
                   <a
                     href={link1}
+                    target="_blank"
+                    rel="noreferrer"
                     className="block bg-secondary text-white text-sm  rounded w-24 lg:w-28 h-10 leading-10 text-center"
                   >
                     View site
                   </a>
                   <a
                     href={link2}
+                    target="_blank"
+                    rel="noreferrer"
                     className="block border border-secondary text-secondary font-medium text-sm  rounded w-24 lg:w-28 h-10 leading-10 text-center"
                   >
                     View code

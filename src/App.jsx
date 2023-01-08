@@ -6,6 +6,7 @@ import Social from "./Components/Social";
 import { AnimatePresence } from "framer-motion";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+// import "./fonts/StretchPro.otf";
 
 const App = () => {
   const location = useLocation();

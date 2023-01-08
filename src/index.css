@@ -4,17 +4,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap");
 
 @font-face {
-  font-family: "stretch";
-  src: url("./fonts/StretchPro.otf") format("opentype");
+  font-family: "Stretch";
+  src: local("StretchPro"), url("./fonts/StretchPro.otf") format("opentype");
 }
 
 @layer base {
   html {
     font-family: poppins, sans-serif;
   }
+  html,
+  body {
+    overflow-x: hidden;
+  }
   body {
     background: #001829;
-    overflow-x: hidden;
+    position: relative;
   }
 }
 
