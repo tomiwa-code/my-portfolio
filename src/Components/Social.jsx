@@ -50,8 +50,6 @@ const Social = () => {
         {status && (
           <motion.div
             variants={socialMadre}
-            initial="initial"
-            animate="animate"
             className="flex flex-col items-center justify-between h-52 mb-5 md:mb-7"
             exit={{ x: 100, opacity: 0 }}
           >
