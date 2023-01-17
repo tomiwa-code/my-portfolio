@@ -6,8 +6,8 @@ export const projectArr = [
       "React, Tailwind css, VScode, Swiper js, Framer motion, Google map api, Adobe Xd",
     video: 'https://res.cloudinary.com/dgdoymhtj/video/upload/v1673183868/my-portfolio/bueno_bxcota.mp4',
     img: "https://res.cloudinary.com/dgdoymhtj/image/upload/v1673182211/my-portfolio/bueno_ioehyq.png",
-    link1: "git",
-    link2: "github",
+    link1: "https://637af300e44885454b5a08d6--stately-piroshki-7dfcef.netlify.app/",
+    link2: "https://github.com/akinlope/Bueno",
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ export const projectArr = [
     video: "",
     img: "https://res.cloudinary.com/dgdoymhtj/image/upload/v1673182212/my-portfolio/superfly_dy6hji.png",
     link1: "git",
-    link2: "github",
+    link2: "https://github.com/tomiwa-code/superfly/tree/master/client",
   },
   {
     id: 3,
@@ -26,7 +26,7 @@ export const projectArr = [
     video: "https://res.cloudinary.com/dgdoymhtj/video/upload/v1673183957/my-portfolio/shoot_haw2br.mp4",
     img: "https://res.cloudinary.com/dgdoymhtj/image/upload/v1673182217/my-portfolio/shooot_pyunc9.png",
     link1: "https://tomiwacode-shooot.netlify.app/",
-    link2: "github",
+    link2: "https://github.com/tomiwa-code/shooot",
   },
   {
     id: 4,
@@ -35,6 +35,6 @@ export const projectArr = [
     video: "",
     img: "https://res.cloudinary.com/dgdoymhtj/image/upload/v1673182211/my-portfolio/myportfolio_dziw8p.png",
     link1: "https://tomiwa-code.vercel.app/",
-    link2: "github",
+    link2: "https://github.com/tomiwa-code/my-portfolio",
   },
 ];
