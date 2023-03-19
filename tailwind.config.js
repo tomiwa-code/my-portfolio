@@ -3,21 +3,38 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     screens: {
-      sm: "480px",
+      sm: "600px",
       md: "768px",
-      lg: "1024px",
-      xl: "1440px",
-    },
-    colors: {
-      transparent: "transparent",
-      primary: "#4ECDC4",
-      secondary: "#001829",
-      lightGrey: "#CCCCCC",
-      darkGrey: "#888888",
-      white: "#f7f7f7",
-      danger: '#CA3C25'
+      lg: "992px",
+      xl: "1200px",
     },
     extend: {
+      colors: {
+        dark: {
+          100: "#dcf5f3",
+          200: "#b8ebe7",
+          300: "#95e1dc",
+          400: "#71d7d0",
+          500: "#4ecdc4",
+          600: "#3ea49d",
+          700: "#2f7b76",
+          800: "#1f524e",
+          900: "#102927",
+        },
+        light: {
+          100: "#d0d0d0",
+          200: "#a1a1a1",
+          300: "#727272",
+          400: "#434343",
+          500: "#141414",
+          600: "#101010",
+          700: "#0c0c0c",
+          800: "#080808",
+          900: "#040404",
+        },
+        darkSecondary: "#001829",
+        lightSecondary: "#f7f7f7",
+      },
       fontFamily: {
         stretch: "Stretch",
       },

@@ -4,13 +4,19 @@ import { BsPhone } from "react-icons/bs";
 import { FaEnvelope } from "react-icons/fa";
 import { BsWhatsapp } from "react-icons/bs";
 import { skillsArr } from "../data/skills";
+import { useContext } from "react";
+import { ThemeContext } from "../Context/Context";
 
 const About = () => {
+  const { theme } = useContext(ThemeContext);
+
   return (
     <motion.div
       variants={exits}
       exit="exit"
-      className="relative pt-36"
+      className={`${
+        theme === "dark" ? "bg-darkSecondary" : "bg-lightSecondary"
+      } relative pt-36 md:h-screen pb-12 md:pb-0`}
     >
       <motion.div
         variants={slide}
@@ -18,11 +24,31 @@ const About = () => {
         animate="animate"
         className="z-20 text-center space-y-3 w-96 mx-auto mb-14"
       >
-        <p className="text-white text-xs md:text-sm font-light">Brief</p>
-        <h1 className="font-stretch text-primary uppercase text-2xl md:text-4xl">
+        <p
+          className={`${
+            theme === "dark"
+              ? "text-lightSecondary font-light"
+              : "text-light-500"
+          } text-xs md:text-sm`}
+        >
+          Brief
+        </p>
+        <h1
+          className={`font-stretch ${
+            theme === "dark" ? "text-dark-500 font-light" : "text-light-500"
+          } uppercase text-2xl md:text-4xl`}
+        >
           aboout
         </h1>
-        <p className="text-white text-xs md:text-sm font-light">Me</p>
+        <p
+          className={`${
+            theme === "dark"
+              ? "text-lightSecondary font-light"
+              : "text-light-500"
+          } text-xs md:text-sm`}
+        >
+          Me
+        </p>
       </motion.div>
       <div className="w-full block lg:flex lg:justify-center lg:space-x-12">
         <motion.div
@@ -30,7 +56,10 @@ const About = () => {
           initial="initial"
           whileInView="animate"
           viewport={{ once: true }}
-          className="bg-white w-8/12 mx-auto lg:mx-0 lg:w-5/12 md:h-80 overflow-hidden rounded-lg block md:flex items-center"
+          className={`
+            ${
+              theme === "dark" ? "bg-lightSecondary" : "bg-white"
+            }  w-8/12 mx-auto lg:mx-0 lg:w-5/12 md:h-80 overflow-hidden rounded-lg block md:flex items-center`}
         >
           <div className="bg-primary w-32 h-32 rounded-full md:rounded-none mx-auto md:mx-0 md:w-2/5 md:h-full overflow-hidden md:overflow-visible mt-6 md:mt-0">
             <img
@@ -40,7 +69,7 @@ const About = () => {
             />
           </div>
           <div className="w-full md:w-3/5 flex flex-col items-center justify-center p-5">
-            <p className="text-sm text-secondary text-center">
+            <p className="text-sm text-light-500 text-center">
               My name is AYOOLA ADETOMIWA OGUNBASE, I'm from Lagos state
               Nigeria. I'm a web developer specialized in creating stunning
               UI/UX designs and websites. I've been working as a web developer
@@ -51,7 +80,7 @@ const About = () => {
               <div className="">
                 <a
                   href="tel:+2349120749746"
-                  className="text-lg mx-auto text-primary bg-secondary rounded-full text-center w-10 h-10 flex items-center justify-center"
+                  className="text-lg mx-auto rounded-full text-center w-10 h-10 flex items-center justify-center"
                 >
                   <BsPhone />
                 </a>
@@ -62,7 +91,7 @@ const About = () => {
               <div className="">
                 <a
                   href="mailto: tomiwa.code@gmail.com"
-                  className="text-lg mx-auto text-primary bg-secondary rounded-full text-center w-10 h-10 flex items-center justify-center"
+                  className="text-lg mx-auto rounded-full text-center w-10 h-10 flex items-center justify-center"
                 >
                   <FaEnvelope />
                 </a>
@@ -73,7 +102,7 @@ const About = () => {
               <div className="">
                 <a
                   href=" https://wa.me/+2349058419649?text=Hello%20Tomiwa,%20I%20saw%20portfolio%20and%20I..."
-                  className="text-lg mx-auto text-primary bg-secondary rounded-full text-center w-10 h-10 flex items-center justify-center"
+                  className="text-lg mx-auto rounded-full text-center w-10 h-10 flex items-center justify-center"
                 >
                   <BsWhatsapp />
                 </a>
@@ -82,7 +111,7 @@ const About = () => {
                 </p>
               </div>
             </div>
-            <p className="text-darkGrey text-xs text-center mt-4">
+            <p className="text-gray-400 text-xs text-center mt-4">
               I'm the man for the job.
             </p>
           </div>
@@ -92,7 +121,9 @@ const About = () => {
           initial="initial"
           whileInView="animate"
           viewport={{ once: true }}
-          className="bg-white w-8/12 mx-auto lg:mx-0 lg:w-4/12 py-4 overflow-hidden rounded-lg my-12 lg:my-0"
+          className={`${
+            theme === "dark" ? "bg-lightSecondary" : "bg-white"
+          } w-8/12 mx-auto lg:mx-0 lg:w-4/12 py-4 overflow-hidden rounded-lg mt-12 lg:mt-0`}
         >
           <h3 className="uppercase text-darkGrey text-lg text-center font-medium mb-3">
             skills

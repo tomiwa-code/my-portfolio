@@ -7,12 +7,16 @@ import { BsDashLg } from "react-icons/bs";
 import { AnimatePresence, motion } from "framer-motion";
 import { fadeIn, slideIn, socialMadre } from "../variants";
 import { useState } from "react";
+import { useContext } from "react";
+import { ThemeContext } from "../Context/Context";
 
 const Social = () => {
-  const [status, setStatus] = useState(false);
+  const [status, setStatus] = useState(true);
   const showIcons = () => {
     setStatus(!status);
   };
+  const { theme } = useContext(ThemeContext);
+
   const socialArr = [
     {
       id: 1,
@@ -69,7 +73,11 @@ const Social = () => {
           </motion.div>
         )}
       </AnimatePresence>
-      <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+      <div
+        className={`w-12 h-12 ${
+          theme === "dark" ? "bg-dark-500" : "bg-light-500 text-lightSecondary"
+        } rounded-full flex items-center justify-center`}
+      >
         {status ? (
           <motion.div
             animate={status ? { rotate: 360 } : { rotate: 0 }}
@@ -88,7 +96,6 @@ const Social = () => {
           </motion.div>
         )}
       </div>
-      {/* <div className="w-0.5 bg-lightGrey opacity-60 h-28 hidden md:block"></div> */}
     </motion.div>
   );
 };

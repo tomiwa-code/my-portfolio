@@ -17,77 +17,8 @@
     overflow-x: hidden;
   }
   body {
-    background: #001829;
     position: relative;
   }
-}
-
-.buttons button {
-  line-height: 48px;
-}
-
-.btn-flip:after {
-  top: 0;
-  left: 0;
-  opacity: 0;
-  width: 100%;
-  height: 100%;
-  color: #001829;
-  display: block;
-  transition: 0.5s;
-  position: absolute;
-  background: #f7f7f7;
-  content: attr(data-back);
-  transform: translateY(-50%) rotateX(90deg);
-}
-.btn-flip:before {
-  top: 0;
-  left: 0;
-  opacity: 1;
-  color: #001829;
-  display: block;
-  transition: 0.5s;
-  position: relative;
-  background: #4ecdc4;
-  content: attr(data-front);
-  transform: translateY(0) rotateX(0);
-}
-
-.btn-flip:hover:after {
-  opacity: 1;
-  transform: translateY(0) rotateX(0);
-}
-.btn-flip:hover:before {
-  opacity: 0;
-  transform: translateY(50%) rotateX(90deg);
-}
-
-.view svg {
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-
-.view rect {
-  fill: none;
-  stroke: #4ecdc4;
-  stroke-width: 2;
-  stroke-dasharray: 422, 0;
-  transition: all 0.35s linear;
-}
-
-.view:hover {
-  font-weight: 600;
-  letter-spacing: 1px;
-}
-
-.view:hover rect {
-  stroke-width: 5;
-  stroke-dasharray: 15, 310;
-  stroke-dashoffset: 48;
-  transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .social a::before {
@@ -113,7 +44,7 @@
   position: relative;
 }
 
-.navbar a::before {
+.navbar .dark::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -121,6 +52,17 @@
   width: 0;
   height: 2px;
   background-color: #4ecdc4;
+  transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.navbar .light::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background-color: #141414;
   transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
@@ -132,20 +74,93 @@
   }
 }
 
-.holder {
-  border-radius: 35% 65% 71% 29% / 33% 40% 60% 67%;
-}
-
-.holder:hover img {
-  transform: scale(1.1);
-}
-
-.yo {
-  margin-top: 15px !important;
-}
-
 .active {
-  color: #4ecdc4;
   text-decoration: line-through;
   text-decoration-thickness: 2px;
+}
+.dark.active {
+  color: #4ecdc4;
+}
+
+.light.active {
+  color: #141414;
+}
+
+.darkBtn.btn {
+  text-align: center;
+  background: linear-gradient(-45deg, #dcf5f3, #95e1dc, #4ecdc4, #2f7b76);
+  background-size: 600%;
+  -webkit-animation: anime 16s linear infinite;
+  animation: anime 16s linear infinite;
+}
+
+@-webkit-keyframes anime {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes anime {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.dBtn .v-btn {
+  --c: #2f7b76;
+}
+
+.lBtn .v-btn {
+  --c: #434343;
+}
+
+.v-btn {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: 0.5s;
+}
+
+.v-btn span {
+  position: absolute;
+  width: 25%;
+  height: 100%;
+  background-color: var(--c);
+  transform: translateY(150%);
+  border-radius: 0%;
+  left: calc((var(--n) - 1) * 25%);
+  transition: 0.5s;
+  transition-delay: calc((var(--n) - 1) * 0.1s);
+  z-index: -1;
+}
+
+.v-btn:hover span {
+  transform: translateY(0) scale(2);
+}
+
+.v-btn span:nth-child(1) {
+  --n: 1;
+}
+
+.v-btn span:nth-child(2) {
+  --n: 2;
+}
+
+.v-btn span:nth-child(3) {
+  --n: 3;
+}
+
+.v-btn span:nth-child(4) {
+  --n: 4;
 }

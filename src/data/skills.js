@@ -33,27 +33,12 @@ export const skillsArr = [
         name: "Tailwind Css",
         color: "#4ECDC4",
       },
-      {
-        id: 7,
-        name: "Styled Component",
-        color: "#888888",
-      },
     ],
   },
   {
     id: 2,
     heading: "back-end",
     skills: [
-      {
-        id: 1,
-        name: "Node JS",
-        color: "#CCE4EA",
-      },
-      {
-        id: 2,
-        name: "Express JS",
-        color: "#001829",
-      },
       {
         id: 3,
         name: "Mongo DB",
@@ -89,11 +74,6 @@ export const skillsArr = [
         id: 3,
         name: "CorelDraw",
         color: "#1985A1",
-      },
-      {
-        id: 4,
-        name: "Wireframes",
-        color: "#888888",
       },
     ],
   },

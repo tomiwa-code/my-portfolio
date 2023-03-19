@@ -1,71 +1,81 @@
-import { motion } from "framer-motion";
-import myresume from "../data/myresume.pdf";
-import { madre, slideInSpring } from "../variants";
+import { useContext } from "react";
+import { ThemeContext } from "../Context/Context";
+import myResume from "../data/myresume.pdf";
 
 const Home = () => {
+  const { theme } = useContext(ThemeContext);
+
   return (
-    <div className="bg-secondary w-screen h-screen flex flex-col justify-center items-center relative">
-      <motion.div
-        variants={madre}
-        initial="initial"
-        animate="animate"
-        className="z-20 text-center space-y-3 md:mt-12"
-      >
-        <motion.p
-          variants={slideInSpring("right")}
-          className="text-white text-xs md:text-sm font-light"
-        >
+    <div
+      className={`${
+        theme === "dark" ? "bg-darkSecondary" : "bg-lightSecondary"
+      } w-screen h-screen flex flex-col items-center justify-center relative`}
+    >
+      <div className="md:mt-12 w-[70%]">
+        <p className={`text-${theme}-500 text-sm text-left md:text-xl font-light`}>
           Hi, my name is
-        </motion.p>
-        <motion.h1
-          variants={slideInSpring("left")}
-          className="font-stretch text-primary uppercase text-2xl md:text-4xl"
+        </p>
+        <h1
+          className={`font-stretch ${
+            theme === "dark" ? "text-dark-200 " : "text-light-500"
+          } uppercase text-3xl text-left md:text-7xl mt-5`}
         >
           toomiwa
-        </motion.h1>
-        <motion.p
-          variants={slideInSpring("right")}
-          className="text-white w-2/3 mx-auto text-center text-xs md:text-sm font-light"
+        </h1>
+        <p
+          className={`${
+            theme === "dark" ? "text-dark-100 " : "text-light-300 "
+          } font-medium md:font-semibold  text-2xl text-left md:text-7xl mt-3`}
         >
-          I'm a software developer specialize in building and occasionally
+          I build stunning websites.
+        </p>
+        <p
+          className={`${
+            theme === "dark" ? "text-lightSecondary" : "text-light-500"
+          } md:w-[500px] px-2 md:px-0 text-left text-sm md:text-lg font-light mt-5`}
+        >
+          I'm a frontend developer specialize in building and occasionally
           designing exceptional digital experiences.
-        </motion.p>
-        <motion.div
-          variants={slideInSpring("left")}
-          className="flex flex-col md:block p-4 space-y-6 md:space-x-8 buttons"
-        >
-          <a href={myresume} download={"My Resume"}>
-            <button
-              className="btn-flip w-36 text-sm md:w-40 h-10 md:h-12 relative text-center font-medium"
-              data-back="My Resumé"
-              data-front="Download CV"
-            ></button>
-          </a>
-          <a href="https://github.com/tomiwa-code">
-            <button
-              custom={2.4}
-              className="text-primary text-sm w-36 h-12 md:w-40 font-medium view relative"
+        </p>
+        <div className="space-y-6 md:space-x-8 mt-6 text-left">
+          <button
+            className={`btn rounded text-center font-medium relative hover:scale-95 duration-200 ${
+              theme === "dark"
+                ? "darkBtn text-darkSecondary"
+                : "bg-light-500 text-lightSecondary lightBtn"
+            }`}
+          >
+            <a
+              href={myResume}
+              target="_blank"
+              rel="noreferrer"
+              className="block w-[150px] py-4 md:w-[180px] md:py-5"
             >
-              <svg>
-                <rect x="0" y="0" fill="none" width="100%" height="100%" />
-              </svg>
+              View Resumé
+            </a>
+          </button>
+          <button
+            className={`rounded text-center font-medium border-2 ${
+              theme === "dark"
+                ? "text-dark-500 border-dark-500 dBtn"
+                : "border-light-500 text-light-500 lBtn hover:text-light-100"
+            }`}
+          >
+            <a
+              href="https://github.com/tomiwa-code"
+              target="_blank"
+              rel="noreferrer"
+              className="block w-[150px] py-4 md:w-[180px] md:py-5 overflow-hidden v-btn"
+            >
               View GitHub
-            </button>
-          </a>
-        </motion.div>
-        <motion.div
-          variants={slideInSpring("right")}
-          className="flex items-center justify-center yo relative w-48 h-52 md:w-64 md:h-56 mx-auto"
-        >
-          <div className="bg-primary holder w-full h-full overflow-hidden hover:cursor-crosshair">
-            <img
-              src="https://res.cloudinary.com/dgdoymhtj/image/upload/v1673184072/my-portfolio/yo_ul1rh2.png"
-              alt="yo"
-              className="w-64 h-56 object-cover duration-300"
-            />
-          </div>
-        </motion.div>
-      </motion.div>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </a>
+          </button>
+        </div>
+      </div>
     </div>
   );
 };
