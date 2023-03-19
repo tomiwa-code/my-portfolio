@@ -1,6 +1,8 @@
 import { useContext } from "react";
 import { ThemeContext } from "../Context/Context";
 import myResume from "../data/myresume.pdf";
+import { motion } from "framer-motion";
+import { slideHome, slideInHome } from "../variants";
 
 const Home = () => {
   const { theme } = useContext(ThemeContext);
@@ -12,32 +14,51 @@ const Home = () => {
       } w-screen h-screen flex flex-col items-center justify-center relative`}
     >
       <div className="md:mt-12 w-[70%]">
-        <p className={`text-${theme}-500 text-sm text-left md:text-xl font-light`}>
+        <motion.p
+          variants={slideInHome}
+          initial="initial"
+          animate="animate"
+          className={`text-${theme}-500 text-sm text-left md:text-xl font-light`}
+        >
           Hi, my name is
-        </p>
-        <h1
+        </motion.p>
+        <motion.h1
+          variants={slideHome}
+          initial="initial"
+          animate="animate"
           className={`font-stretch ${
             theme === "dark" ? "text-dark-200 " : "text-light-500"
           } uppercase text-3xl text-left md:text-7xl mt-5`}
         >
           toomiwa
-        </h1>
-        <p
+        </motion.h1>
+        <motion.p
+          variants={slideHome}
+          initial="initial"
+          animate="animate"
           className={`${
             theme === "dark" ? "text-dark-100 " : "text-light-300 "
           } font-medium md:font-semibold  text-2xl text-left md:text-7xl mt-3`}
         >
           I build stunning websites.
-        </p>
-        <p
+        </motion.p>
+        <motion.p
+          variants={slideInHome}
+          initial="initial"
+          animate="animate"
           className={`${
             theme === "dark" ? "text-lightSecondary" : "text-light-500"
           } md:w-[500px] px-2 md:px-0 text-left text-sm md:text-lg font-light mt-5`}
         >
           I'm a frontend developer specialize in building and occasionally
           designing exceptional digital experiences.
-        </p>
-        <div className="space-y-6 md:space-x-8 mt-6 text-left">
+        </motion.p>
+        <motion.div
+          variants={slideInHome}
+          initial="initial"
+          animate="animate"
+          className="space-y-6 md:space-x-8 mt-6 text-left"
+        >
           <button
             className={`btn rounded text-center font-medium relative hover:scale-95 duration-200 ${
               theme === "dark"
@@ -74,7 +95,7 @@ const Home = () => {
               <span></span>
             </a>
           </button>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

@@ -15,15 +15,6 @@ export const fadeIn = (props) => {
   };
 };
 
-export const exits = {
-  exit: {
-    x: "-100vw",
-    transition: {
-      ease: "easeInOut",
-    },
-  },
-};
-
 export const slide = {
   initial: {
     opacity: 0,
@@ -110,6 +101,38 @@ export const socialMadre = {
     transition: {
       staggerChildren: 0.1,
       staggerDirection: -1,
+    },
+  },
+};
+
+export const slideHome = {
+  initial: {
+    opacity: 0,
+    x: -500,
+  },
+  animate: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: "spring",
+      stiffness: 120,
+      damping: 8,
+      mass: 0.4,
+    },
+  },
+};
+
+export const slideInHome = {
+  initial: {
+    opacity: 0,
+    x: -50,
+  },
+  animate: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: "spring",
+      stiffness: 150,
     },
   },
 };

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { slide, slideIn, exits } from "../variants";
+import { slide, slideIn } from "../variants";
 import { BsPhone } from "react-icons/bs";
 import { FaEnvelope } from "react-icons/fa";
 import { BsWhatsapp } from "react-icons/bs";
@@ -11,9 +11,7 @@ const About = () => {
   const { theme } = useContext(ThemeContext);
 
   return (
-    <motion.div
-      variants={exits}
-      exit="exit"
+    <div
       className={`${
         theme === "dark" ? "bg-darkSecondary" : "bg-lightSecondary"
       } relative pt-36 md:h-screen pb-12 md:pb-0`}
@@ -159,7 +157,7 @@ const About = () => {
           </div>
         </motion.div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

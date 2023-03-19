@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { slide, slideIn, exits } from "../variants";
+import { slide, slideIn } from "../variants";
 import { projectArr } from "../data/projects";
 import HoverVideoPlayer from "react-hover-video-player";
 import { useContext } from "react";
@@ -9,9 +9,7 @@ const Projects = () => {
   const { theme } = useContext(ThemeContext);
 
   return (
-    <motion.div
-      variants={exits}
-      exit="exit"
+    <div
       className={`${
         theme === "dark" ? "bg-darkSecondary" : "bg-lightSecondary"
       } relative pt-36`}
@@ -132,7 +130,7 @@ const Projects = () => {
       <p className="text-xs text-gray-400 pb-12 md:pb-20 text-center w-2/4 mx-auto">
         Let me handle your projects and you'll be amazed.
       </p>
-    </motion.div>
+    </div>
   );
 };
 

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { slide, slideIn, exits, notification } from "../variants";
+import { slide, slideIn, notification } from "../variants";
 import emailjs from "@emailjs/browser";
 import { useContext } from "react";
 import { ThemeContext } from "../Context/Context";
@@ -70,9 +70,7 @@ const Contact = () => {
       >
         <p className={`text-sm ${msg.textColor} font-medium`}>{msg.text}</p>
       </motion.div>
-      <motion.div
-        variants={exits}
-        exit="exit"
+      <div
         className={`${
           theme === "dark" ? "bg-darkSecondary" : "bg-lightSecondary"
         } relative pt-36 min-h-screen pb-12 md:pb-0`}
@@ -204,7 +202,7 @@ const Contact = () => {
             </button>
           </div>
         </motion.form>
-      </motion.div>
+      </div>
     </>
   );
 };
