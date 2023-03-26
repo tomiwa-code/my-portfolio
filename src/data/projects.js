@@ -37,4 +37,13 @@ export const projectArr = [
     link1: "https://tomiwa-code.vercel.app/",
     link2: "https://github.com/tomiwa-code/my-portfolio",
   },
+  {
+    id: 5,
+    name: "student result computation",
+    utilities: "PHP, SCSS, Jquery, JavaScript, Flickity, Adobe XD",
+    video: "",
+    img: "",
+    link1: "https://student-result-computation.000webhostapp.com/",
+    link2: "https://github.com/tomiwa-code/Student_Result_Computation.git"
+  },
 ];
