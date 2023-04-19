@@ -52,4 +52,14 @@ export const projectArr = [
     link1: "https://tytn-wears.vercel.app/",
     link2: "https://github.com/tomiwa-code/tytn_wears.git",
   },
+  {
+    id: 6,
+    name: "nizami movie center",
+    utilities: "Next JS, Sanity, Paystack, Tailwind Css, Css",
+    video:
+      "https://res.cloudinary.com/dgdoymhtj/video/upload/v1681934857/my-portfolio/nizami_drtahc.mp4",
+    img: "https://res.cloudinary.com/dgdoymhtj/image/upload/v1681932709/my-portfolio/nizami_mml7fw.png",
+    link1: "https://nizami-movie-center.vercel.app/",
+    link2: "https://github.com/tomiwa-code/nizami-movie-center.git",
+  },
 ];
